@@ -5,8 +5,8 @@ export abstract class CoreBehaviour {
 
     public element: Cypress.Chainable<JQuery<HTMLElement>>
 
-    constructor(locator: string, locationType: LocatorTypes) {
-        switch (locationType) {
+    constructor(locator: string, locatorType: LocatorTypes) {
+        switch (locatorType) {
             case LocatorTypes.XPATH:
                 this.element = cy.xpath(locator)
                 break;
