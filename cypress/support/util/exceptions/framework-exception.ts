@@ -1,0 +1,7 @@
+export class FrameworkException extends Error {
+
+    constructor(message: any) {
+        super(message);
+        this.name = "FrameworkException";
+    }
+}
