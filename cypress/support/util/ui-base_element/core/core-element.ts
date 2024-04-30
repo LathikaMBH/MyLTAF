@@ -13,7 +13,7 @@ export interface CoreElements {
 
     assertText(): void;
 
-    enterText(): void;
+    isEnabled(): void;
 
-    clickElement(): void;
+    isDisabled(): void;
 }

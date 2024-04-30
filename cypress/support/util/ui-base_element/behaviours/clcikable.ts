@@ -6,7 +6,7 @@ import { CoreBehaviour } from "../core/core-behaviour";
  * @author Lathika MBH
  * @Date 29-04-2024
  */
-export class Clickable extends CoreBehaviour {
+export class ClickableBehaviour extends CoreBehaviour {
 
     constructor(locator: string, locatorType: LocatorTypes ){
         super(locator, locatorType)
