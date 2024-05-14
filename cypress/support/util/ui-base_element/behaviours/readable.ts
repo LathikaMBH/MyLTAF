@@ -1,4 +1,4 @@
-import { LocatorTypes } from "../../locator-types";
+import { LocatorTypes } from "../../enums";
 import { CoreBehaviour } from "../core/core-behaviour";
 
 /**
@@ -18,7 +18,7 @@ export class ReadableBehaviour extends CoreBehaviour {
      * @param text 
      * @returns void 
      */
-    ui_assert_text_equality(text: string): void {
+    assert_text_equality(text: string): void {
         this.element.contains(text);
     }
 
@@ -27,7 +27,7 @@ export class ReadableBehaviour extends CoreBehaviour {
      * @param text 
      * @returns void
      */
-    ui_assert_exact_text_equality(text: string): void {
+    assert_exact_text_equality(text: string): void {
         this.element.should('contain.text', text);
     }
 
@@ -36,7 +36,7 @@ export class ReadableBehaviour extends CoreBehaviour {
      * @param text 
      * @returns void
      */
-    ui_assert_text_should_not_visible(text: string): void {
+    assert_text_should_not_visible(text: string): void {
         this.element.should('not.contain', text);
     }
 
@@ -45,7 +45,7 @@ export class ReadableBehaviour extends CoreBehaviour {
      * @param text 
      * @returns void
      */
-    ui_assert_input_field_text(text: string): void {
+    assert_input_field_text(text: string): void {
         this.element.should('have.value', text);
     }
 
@@ -54,7 +54,7 @@ export class ReadableBehaviour extends CoreBehaviour {
      * @param text 
      * @returns void
      */
-    ui_assert_input_field_text_not_available(text: string): void {
+    assert_input_field_text_not_available(text: string): void {
         this.element.should('not.have.value', text);
     }
 }

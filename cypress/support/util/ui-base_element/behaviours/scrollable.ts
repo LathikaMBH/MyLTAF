@@ -1,4 +1,4 @@
-import { LocatorTypes } from "../../locator-types";
+import { LocatorTypes } from "../../enums";
 import { CoreBehaviour } from "../core/core-behaviour";
 
 /**

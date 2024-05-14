@@ -1,4 +1,4 @@
-import { LocatorTypes } from "../../locator-types";
+import { LocatorTypes } from "../../enums";
 import { CoreBehaviour } from "../core/core-behaviour";
 
 /**
@@ -18,7 +18,7 @@ export class TypableBehaviour extends CoreBehaviour {
      * @param text 
      * @returns void
      */
-    ui_type(text: string): void {
+    type(text: string): void {
         this.element.type(text);
     }
 
@@ -27,7 +27,7 @@ export class TypableBehaviour extends CoreBehaviour {
      * @param text 
      * @returns void
      */
-    ui_click_and_type(text: string): void {
+    click_and_type(text: string): void {
         this.element.click({force: true}).type(text, {force: true});
     }
 
@@ -36,7 +36,7 @@ export class TypableBehaviour extends CoreBehaviour {
      * @param text 
      * @returns void
      */
-    ui_type_and_hit_keyboard_enter(text: string): void {
+    type_and_hit_keyboard_enter(text: string): void {
         this.element.type(`${text}{enter}`);
     }
 
@@ -45,7 +45,7 @@ export class TypableBehaviour extends CoreBehaviour {
      * @param text 
      * @returns void
      */
-    ui_clear_and_type(text: string): void {
+    clear_and_type(text: string): void {
         this.element.clear().type(text,{force: true});
     }
 }

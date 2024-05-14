@@ -1,5 +1,6 @@
 import { FrameworkException } from "../../exceptions/framework-exception";
-import { LocatorTypes } from "../../locator-types";
+import { LocatorTypes } from "../../enums";
+/// <reference types="cypress-xpath" />
 
 export abstract class CoreBehaviour {
 
@@ -10,11 +11,9 @@ export abstract class CoreBehaviour {
             case LocatorTypes.XPATH:
                 this.element = cy.xpath(locator)
                 break;
-
             case LocatorTypes.CYPRESS_GET:
                 this.element =  cy.get(locator)
-                break;
-            
+                break;            
             default: {
                 throw new FrameworkException("Oops ! Unsupported locator type")
                 break;

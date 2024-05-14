@@ -1,4 +1,4 @@
-import { LocatorTypes } from "../../locator-types";
+import { LocatorTypes } from "../../enums";
 import { CoreBehaviour } from "../core/core-behaviour";
 
 /**
@@ -17,7 +17,7 @@ export class ClickableBehaviour extends CoreBehaviour {
      * from this method user will be able to click on the button or soem other element
      * @returns void
      */
-    ui_clcik(): void {
+    clcik(): void {
         this.element.click();
     }
 
@@ -25,7 +25,7 @@ export class ClickableBehaviour extends CoreBehaviour {
      * from this method user can click element forcefully
      * @returns void
      */
-    ui_force_click(): void {
+    force_click(): void {
         this.element.click({force: true});
     }
 
@@ -33,7 +33,7 @@ export class ClickableBehaviour extends CoreBehaviour {
      * from this method user can double click on the element
      *@returns void
      */
-    ui_double_click(): void {
+    double_click(): void {
         this.element.dblclick();
     }
 
@@ -41,7 +41,7 @@ export class ClickableBehaviour extends CoreBehaviour {
      * from this method user can right click on the element
      * @returns void
      */
-    ui_right_click(): void {
+    right_click(): void {
         this.element.rightclick();
     }
 

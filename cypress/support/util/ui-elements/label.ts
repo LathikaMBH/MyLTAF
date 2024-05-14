@@ -1,9 +1,10 @@
 import { LocatorTypes } from "../enums";
-import { BaseButton } from "../ui-base_element/component/base-Buton";
+import { BaseLabel } from "../ui-base_element/component/base-label";
 
-export class Button extends BaseButton {
+export class Label extends BaseLabel {
 
     constructor(locator: string, locatorType: LocatorTypes) {
         super(locator, locatorType);
+
     }
 }
