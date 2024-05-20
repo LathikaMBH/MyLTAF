@@ -14,10 +14,10 @@ jobs:
       - run:
           name: Run Cypress tests
           command: npm run cypress:run
- workflows:
-    build-and-test:  # You can rename this workflow section if needed
-       jobs:
-       - run-LTAF
+workflows:
+  build-and-test:  # You can rename this workflow section if needed
+    jobs:
+      - run-LTAF
 # jobs:
 #   run-LTAF:
 #     docker:
