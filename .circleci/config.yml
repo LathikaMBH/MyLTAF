@@ -13,7 +13,7 @@ jobs:
       #     command: npm run build:cypress  # Assuming your build script is named 'build:cypress'
       - run:
           name: Run Cypress tests
-          command: npx run cy:run
+          command: npx cypress run
 workflows:
   build-and-test:  # You can rename this workflow section if needed
     jobs:
