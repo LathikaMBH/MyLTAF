@@ -8,15 +8,15 @@ describe('Orange HRM Login Page Related Test cases', ()=> {
 
 
 
-    xit('login functionaly - happy path', ()=> {
-        //bagePage.visit_base_page()
-        //.step_txt_enter_user_name('Admin')
-        //.step_txt_enter_password('admin123')
-        //.step_btn_click_login()
-        //.verify_validate_dashboard_title('Dashboard');
+    it('login functionaly - happy path', ()=> {
+        bagePage.visit_base_page()
+        .step_txt_enter_user_name('Admin')
+        .step_txt_enter_password('admin123')
+        .step_btn_click_login()
+        .verify_validate_dashboard_title('Dashboard');
     })
 
-    xit('Login functionality - wrong userName', ()=> {
+    it('Login functionality - wrong userName', ()=> {
         bagePage.visit_base_page()
         .step_txt_enter_user_name('Admin123')
         .step_txt_enter_password('admin123')
@@ -24,7 +24,7 @@ describe('Orange HRM Login Page Related Test cases', ()=> {
         .verify_wrong_login_credential_message('Invalid credentials');
     })
 
-    xit('Login functionality - wrong passWord', ()=> {
+    it('Login functionality - wrong passWord', ()=> {
         bagePage.visit_base_page()
         .step_txt_enter_user_name('Admin')
         .step_txt_enter_password('admin123456')
