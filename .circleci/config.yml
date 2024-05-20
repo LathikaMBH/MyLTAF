@@ -8,7 +8,7 @@ jobs:
       - checkout #code fetch from the git current branch
       - run:
           name: dfdf
-          command: npm install -g- -no-save env-cmd 
+          command: npm install -g- -no-save env-cmd --force
       - run:
           name: ccc
           command: chmod +x $(which env-cmd)        
