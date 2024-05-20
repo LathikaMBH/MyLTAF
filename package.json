@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:run": "env-cmd -f ./.env cypress run --headless",
+    "cy:run": "env-cmd -f ./.env cypress run",
     "cy:run:chrome": "env-cmd -f ./.env cypress run --browser chrome",
     "cy:open": "env-cmd -f ./.env cypress open",
     "format": "npx prettier --write .",
