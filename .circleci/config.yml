@@ -8,9 +8,9 @@ jobs:
       - run:
           name: Install dependencies
           command: npm install
-      - run:
-          name: Build TypeScript
-          command: npm run build:cypress  # Assuming your build script is named 'build:cypress'
+      # - run:
+      #     name: Build TypeScript
+      #     command: npm run build:cypress  # Assuming your build script is named 'build:cypress'
       - run:
           name: Run Cypress tests
           command: npm run cypress:run
