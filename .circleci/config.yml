@@ -3,15 +3,12 @@ version: 2.1  # Adjust if needed based on CircleCI version
 jobs:
   run-LTAF:
     docker:
-      - image: circleci/node:lts  # Use a Node.js image with LTS version
+      - image: cypress/base:14.16.0  # Use a Node.js image with LTS version
     steps:
       - checkout #code fetch from the git current branch      
-      - run: 
-          name: Install typescript globally
-          command: sudo npm install -g typescript env-cmd
       - run:    
           name: Run LTAF
-          command: sudo npm run cy:run  
+          command: npm run cy:run  
 workflows:
   build-and-test:  # You can rename this workflow section if needed
     jobs:
