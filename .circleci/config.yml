@@ -1,24 +1,38 @@
 version: 2.1  # Adjust if needed based on CircleCI version
-
 jobs:
-  run-LTAF:
+  cypress-run:
     docker:
-      - image: cypress/base:14.16.0  # Use a Node.js image with LTS version
+      - image: cypress/base:13.8.0
     steps:
-      - checkout #code fetch from the git current branch
+      - checkout
       - run:
-          name: dfdf
-          command: npm install -g --no-save env-cmd
+          name: Install dependencies
+          command: npm install
       - run:
-          name: ccc
-          command: chmod +x $(which env-cmd)        
-      - run: 
-          name: Install typescript globally
-          command: npm install    
-      - run:    
-          name: Run LTAF
-          command: npm run cy:run  
-workflows:
-  build-and-test:  # You can rename this workflow section if needed
-    jobs:
-      - run-LTAF
+          name: Build TypeScript
+          command: npm run build:cypress  # Assuming your build script is named 'build:cypress'
+      - run:
+          name: Run Cypress tests
+          command: npm run cypress:run
+# jobs:
+#   run-LTAF:
+#     docker:
+#       - image: cypress/base:14.16.0  # Use a Node.js image with LTS version
+#     steps:
+#       - checkout #code fetch from the git current branch
+#       - run:
+#           name: dfdf
+#           command: npm install -g --no-save env-cmd
+#       - run:
+#           name: ccc
+#           command: chmod +x $(which env-cmd)        
+#       - run: 
+#           name: Install typescript globally
+#           command: npm install    
+#       - run:    
+#           name: Run LTAF
+#           command: npm run cy:run  
+# workflows:
+#   build-and-test:  # You can rename this workflow section if needed
+#     jobs:
+#       - run-LTAF
