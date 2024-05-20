@@ -15,4 +15,4 @@ jobs:
 workflows:
   build-and-test:  # You can rename this workflow section if needed
     jobs:
-      - run-LATF
+      - run-LTAF
