@@ -10,7 +10,8 @@ export class BasePage {
     public visit_base_page(): OranegHrmLoginPage {
          //alert(Cypress.env("URL"));
        // cy.visit(Cypress.env('URL'));
-       cy.visit(Cypress.env("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"));
+       cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+       //cy.visit(Cypress.env("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"));
         return new OranegHrmLoginPage();
     }
 
