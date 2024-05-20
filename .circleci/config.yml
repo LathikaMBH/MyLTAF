@@ -8,7 +8,7 @@ jobs:
       - checkout #code fetch from the git current branch      
       - run: 
           name: Install typescript globally
-          command: sudo npm install -g typescript 
+          command: sudo npm install -g typescript env-cmd
       - run:    
           name: Run LTAF
           command: npm run cy:run  
