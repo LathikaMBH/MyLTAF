@@ -11,7 +11,7 @@ jobs:
           command: sudo npm install -g typescript env-cmd
       - run:    
           name: Run LTAF
-          command: npm run cy:run  
+          command: sudo npm run cy:run  
 workflows:
   build-and-test:  # You can rename this workflow section if needed
     jobs:
