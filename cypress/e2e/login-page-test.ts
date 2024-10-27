@@ -10,7 +10,7 @@ describe('Orange HRM Login Page Related Test cases', ()=> {
 
     it('login functionaly - happy path', ()=> {
         bagePage.visit_base_page()
-        .step_txt_enter_user_name('Admin')
+        .step_txt_enter_user_name('AdminXX')
         .step_txt_enter_password('admin123')
         .step_btn_click_login()
         .verify_validate_dashboard_title('Dashboard');
