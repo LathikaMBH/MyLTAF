@@ -3,6 +3,8 @@ jobs:
   run-LTAF:
     docker:
       - image: cypress/included:13.15.2
+    parallelism: 4
+    resource_class: large
     steps:
       - checkout
       - run:
