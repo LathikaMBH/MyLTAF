@@ -10,7 +10,7 @@ jobs:
           command: npm install
       - run:
           name: Run Cypress tests
-          command: npx cypress run
+          command: npx cypress run --record --key 16c12140-46c2-4e2e-9330-585e290ca3a0
 workflows:
   run-test:  # You can rename this workflow section if needed
     jobs:

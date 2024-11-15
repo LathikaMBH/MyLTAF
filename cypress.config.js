@@ -5,6 +5,7 @@ module.exports = defineConfig({
   env: {
     url: "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
   },
+  projectId: "bxdz1v",
   e2e: {
     setupNodeEvents(on, config) {
       //require('cypress-mochawesome-reporter/register')(on);
