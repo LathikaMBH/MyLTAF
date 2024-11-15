@@ -3,8 +3,8 @@ jobs:
   run-LTAF:
     docker:
       - image: cypress/included:13.15.2
-    parallelism: 3
-    resource_class: small
+    #parallelism: 3
+    #resource_class: small
     steps:
       - checkout
       - run:
@@ -12,7 +12,7 @@ jobs:
           command: npm install
       - run:
           name: Run Cypress tests
-          command: npx cypress run --parallel --record --key 16c12140-46c2-4e2e-9330-585e290ca3a0 --format testname --
+          command: npx cypress run --parallel --record --key 16c12140-46c2-4e2e-9330-585e290ca3a0 
 workflows:
   run-test:  # You can rename this workflow section if needed
     jobs:
