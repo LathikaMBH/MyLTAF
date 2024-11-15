@@ -7,7 +7,7 @@ module.exports = defineConfig({
   },
   e2e: {
     setupNodeEvents(on, config) {
-      require('cypress-mochawesome-reporter/plugin')(on);
+      require('cypress-mochawesome-reporter/reports')(on);
       // implement node event listeners here
       config.env.URL = process.env.URL;
       return config;
